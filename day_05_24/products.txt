@@ -1,0 +1,5 @@
+S0001:갤럭시노트:1000:200110:갤럭시노트는~~~
+S0002:갤럭시20:1500:210430:갤럭시20는~~
+I0001:아이폰13:1000:210510:아이폰13dms~~~
+
+id, seatNum, paytime, starttime, userTime, endTime, productName, price, payType, menu
