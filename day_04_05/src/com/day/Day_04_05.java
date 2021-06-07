@@ -22,7 +22,7 @@ public class Day_04_05 {
 		System.out.println(double_d);
 		
 		//char
-		char char_c = 'ÇÑ';
+		char char_c = 'ï¿½ï¿½';
 		System.out.println(char_c);
 		
 		//boolean
@@ -33,7 +33,7 @@ public class Day_04_05 {
 		String name2 = "helloworld";
 		char c = 'a';
 
-		System.out.printf("½ºÆ®¸µ: %s, ¹®ÀÚ: %c, Á¤¼öÇü: %d\n", name, c, 300);
+		System.out.printf("ï¿½ï¿½Æ®ï¿½ï¿½: %s, ï¿½ï¿½ï¿½ï¿½: %c, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: %d\n", name, c, 300);
 
 		System.out.println("hello\nworld");
 */	
@@ -42,11 +42,11 @@ public class Day_04_05 {
 		
 		String room = "sweet";
 		int number = 1203;
-		char c = 'Áß';
+		char c = 'a';
 		
-		System.out.printf("¾È³ç:%s\nÈ£½Ç:%d\nÀ§Ä¡:%c\n", room, number, c);
+		System.out.printf("ï¿½È³ï¿½:%s\nÈ£ï¿½ï¿½:%d\nï¿½ï¿½Ä¡:%c\n", room, number, c);
 		System.out.println("3"+3/3);
-		//		System.out.println("Hello World"); // typeÀÌ ½ºÆ®¸µÀÌ±¸³ª
+		//		System.out.println("Hello World"); // typeï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½Ì±ï¿½ï¿½ï¿½
 		
 		
 	}

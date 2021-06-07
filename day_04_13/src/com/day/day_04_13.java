@@ -1,275 +1,275 @@
-package com.day;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class day_04_13 {
-
-	public static void main(String[] args) {
-		ArrayList<int[]> list_array = new ArrayList<int[]>();
-		list_array.add(new int[3]);
-		System.out.println(list_array.get(0)[0]);
-		
-	}
-	static void array_list_test() {
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		ArrayList<String> string_list = new ArrayList<String>();
-		list.add(100);
-		list.add(200);
-		list.add(300);
-		//string_list add
-		string_list.add("ÇÐ¿ø");
-		string_list.add("7¹ø Ãâ¼®");
-		string_list.add("93¹ø³²À½");
-		string_list.add("ÀÌ¹øÁÖ Áö³ª¸é 10ÇÁ·Î");	
-		for (int i = 0; i < 100; i++) {
-			list.add(10*(i+1));
-		}
-//		list Å©±âÈ®ÀÎ size()
+//package com.day;
+//
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//
+//public class day_04_13 {
+//
+//	public static void main(String[] args) {
+//		ArrayList<int[]> list_array = new ArrayList<int[]>();
+//		list_array.add(new int[3]);
+//		System.out.println(list_array.get(0)[0]);
+//		
+//	}
+//	static void array_list_test() {
+//		ArrayList<Integer> list = new ArrayList<Integer>();
+//		ArrayList<String> string_list = new ArrayList<String>();
+//		list.add(100);
+//		list.add(200);
+//		list.add(300);
+//		//string_list add
+//		string_list.add("ï¿½Ð¿ï¿½");
+//		string_list.add("7ï¿½ï¿½ ï¿½â¼®");
+//		string_list.add("93ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+//		string_list.add("ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½");	
+//		for (int i = 0; i < 100; i++) {
+//			list.add(10*(i+1));
+//		}
+////		list Å©ï¿½ï¿½È®ï¿½ï¿½ size()
+////		System.out.println(list.size());
+////		string_listÅ©ï¿½ï¿½ È®ï¿½ï¿½
+////		System.out.println(string_list.size());
+//		int s = list.size();
+//		for (int i = 0; i < s; i++) {
+////			System.out.println(string_list.get(i));
+//			//remove for ï¿½ï¿½ iï¿½ï¿½ 0,0,1
+//			list.remove(0);
+//			System.out.printf("%dï¿½ï¿½Â°\n",i);
+////			2ï¿½ï¿½Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½Ê´Â´ï¿½. 
+//			System.out.println(list.size());
+////			System.out.println(list);
+//			
+//		}
 //		System.out.println(list.size());
-//		string_listÅ©±â È®ÀÎ
-//		System.out.println(string_list.size());
-		int s = list.size();
-		for (int i = 0; i < s; i++) {
-//			System.out.println(string_list.get(i));
-			//remove for ¹® i´Â 0,0,1
-			list.remove(0);
-			System.out.printf("%d¹øÂ°\n",i);
-//			2¹øÂ°¶ó´Â °ªÀÌ µé¾î°¡Áö ¾Ê´Â´Ù. 
-			System.out.println(list.size());
-//			System.out.println(list);
-			
-		}
-		System.out.println(list.size());
-		//remove
-		
-		
-	}
-	static int test(int c) {
-		System.out.println("°è¼Ó°è¼Ó°¡");
-		if(c == 0)
-			return c;
-		else
-			return test(--c);
-		
-	}
-	static void string_for() {
-		String text = "hello=2;world=3;test=5;counts=7";
-		String[] n_text = text.split(";");
-		char[][] c_a2 = new char[n_text.length][];
-		
-//		System.out.println(n_text.length);
-//		System.out.println(n_text.length);
-		for(int i = 0 ; i<n_text.length; i++) {
-			c_a2[i] = new char[n_text[i].length()];
-			for (int j = 0; j < c_a2[i].length; j++) {
-				c_a2[i][j] = n_text[i].charAt(j);
-//				System.out.print(c_a2[i][j]);
-			}
-//			System.out.println();
-		}
-		// 2Â÷ ¹è¿­À» »ç¿ëÇØ¼­ ±¸±¸´ÜÀ» ±¸Çö
-		int[][] left_num = new int[10][];
-		
-//		for (int i = 1; i < left_num.length; i++) {
-//			left_num[i] = new int[10]; // º¯¼öÀÇ Å©±â ÁöÁ¤ÇØÁÙ ¶§ »ç¿ë.!
-//			for (int j = 1; j < left_num.length; j++) {
-//				left_num[i][j] = i*j;
-//				System.out.print(left_num[i][j]+"\t");
+//		//remove
+//		
+//		
+//	}
+//	static int test(int c) {
+//		System.out.println("ï¿½ï¿½Ó°ï¿½Ó°ï¿½");
+//		if(c == 0)
+//			return c;
+//		else
+//			return test(--c);
+//		
+//	}
+//	static void string_for() {
+//		String text = "hello=2;world=3;test=5;counts=7";
+//		String[] n_text = text.split(";");
+//		char[][] c_a2 = new char[n_text.length][];
+//		
+////		System.out.println(n_text.length);
+////		System.out.println(n_text.length);
+//		for(int i = 0 ; i<n_text.length; i++) {
+//			c_a2[i] = new char[n_text[i].length()];
+//			for (int j = 0; j < c_a2[i].length; j++) {
+//				c_a2[i][j] = n_text[i].charAt(j);
+////				System.out.print(c_a2[i][j]);
+//			}
+////			System.out.println();
+//		}
+//		// 2ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//		int[][] left_num = new int[10][];
+//		
+////		for (int i = 1; i < left_num.length; i++) {
+////			left_num[i] = new int[10]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½.!
+////			for (int j = 1; j < left_num.length; j++) {
+////				left_num[i][j] = i*j;
+////				System.out.print(left_num[i][j]+"\t");
+////			}
+////			System.out.println();
+////		}
+////		int[][] array = new int[8][9];
+////		
+////		for (int i = 2; i < 10; i++) {
+////			for (int j = 1; j < 10; j++) {
+////				array[i-2][j-1] = i * j;
+////			}
+////		}
+////		
+////		for (int i = 0; i < array.length; i++) {
+////			System.out.print((i+2)+"ï¿½ï¿½:");
+////			System.out.println(Arrays.toString(array[i]));
+////			System.out.println();
+////		}
+//		char c = '*';
+//		int[][] num = new int[5][];
+//		for (int i = 1; i < 6; i++) {
+//			for (int j = 5; j > 0; j--) {
+//				if (i<j) {
+//					System.out.print(" ");
+//				}else {
+//					System.out.print("*");
+//				}
 //			}
 //			System.out.println();
 //		}
-//		int[][] array = new int[8][9];
-//		
-//		for (int i = 2; i < 10; i++) {
-//			for (int j = 1; j < 10; j++) {
-//				array[i-2][j-1] = i * j;
+//		for (int i = 5; i > 0; i--) {
+//			for (int j = 0; j < i; j++) {
+//				System.out.print("*");
 //			}
-//		}
-//		
-//		for (int i = 0; i < array.length; i++) {
-//			System.out.print((i+2)+"´Ü:");
-//			System.out.println(Arrays.toString(array[i]));
 //			System.out.println();
 //		}
-		char c = '*';
-		int[][] num = new int[5][];
-		for (int i = 1; i < 6; i++) {
-			for (int j = 5; j > 0; j--) {
-				if (i<j) {
-					System.out.print(" ");
-				}else {
-					System.out.print("*");
-				}
-			}
-			System.out.println();
-		}
-		for (int i = 5; i > 0; i--) {
-			for (int j = 0; j < i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		
-	}
-	static void string_split() {
-		String text = "hello=2;world=3;test=5;counts=7";
-		String[] n_text = text.split(";");
-//		System.out.println(n_text.length);
-		for (int i = 0; i < n_text.length; i++) {
-
-//			System.out.println(n_text[i].charAt(n_text[i].length()-1));
-//			int n = Integer.parseInt(n_text[i].charAt(n_text[i].length() - 1)+"");
-//			System.out.println(n_text[i].indexOf("=")+1);
-			int ni = Integer.parseInt(n_text[i].charAt(n_text[i].indexOf("=")+1)+"");
-			
-			
-//			System.out.println(ni);
-			
-//			System.out.println(n*10);
-//			System.out.println(n_text[i].indexOf("="));
-		}
-	}
-	static void lotto_shuffle() {
-
-		int[] lotto = new int[45];
-		for (int i = 0; i < lotto.length; i++) {
-			lotto[i] = i + 1;
-//			System.out.println(lotto[i]);
-		}
-//		for (int i = 0; i < lotto.length-1; i++) {
-//			for (int j = 0; j < lotto.length; j++) {
-//				if(lotto[i] == lotto[j]) {
+//		
+//	}
+//	static void string_split() {
+//		String text = "hello=2;world=3;test=5;counts=7";
+//		String[] n_text = text.split(";");
+////		System.out.println(n_text.length);
+//		for (int i = 0; i < n_text.length; i++) {
+//
+////			System.out.println(n_text[i].charAt(n_text[i].length()-1));
+////			int n = Integer.parseInt(n_text[i].charAt(n_text[i].length() - 1)+"");
+////			System.out.println(n_text[i].indexOf("=")+1);
+//			int ni = Integer.parseInt(n_text[i].charAt(n_text[i].indexOf("=")+1)+"");
+//			
+//			
+////			System.out.println(ni);
+//			
+////			System.out.println(n*10);
+////			System.out.println(n_text[i].indexOf("="));
+//		}
+//	}
+//	static void lotto_shuffle() {
+//
+//		int[] lotto = new int[45];
+//		for (int i = 0; i < lotto.length; i++) {
+//			lotto[i] = i + 1;
+////			System.out.println(lotto[i]);
+//		}
+////		for (int i = 0; i < lotto.length-1; i++) {
+////			for (int j = 0; j < lotto.length; j++) {
+////				if(lotto[i] == lotto[j]) {
+//////					System.out.println(lotto[i]);
+////				}
+////			}
+////		}
+//		for (int i = 0; i < 1000; i++) {
+//			int r = (int) (Math.random() * 44) + 1;
+//			int tmp = lotto[0];
+//			lotto[0] = lotto[r];
+//			lotto[r] = tmp;
+//		}
+//		for (int i = 0; i < 7; i++) {
+////			System.out.println(lotto[i]);
+//		}
+//		for (int i = 0; i < 6; i++) {
+//			for (int j = i + 1; j < 7; j++) {
+//				if (lotto[i] > lotto[j]) {
+//					int tmp = lotto[i];
+//					lotto[i] = lotto[j];
+//					lotto[j] = tmp;
+//				}
+//			}
+////			System.out.println(lotto[i]);
+//		}
+//		// selection sorting
+////		for (int i = lotto.length-1; i > 0; i--) {
+////			int max = i;
+////			for (int j = i - 1; j >= 0; j--) {
+////				if 
+////			}
+////			
+//	}
+//
+//	static void lotto() {
+//		// ï¿½Ý¿ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!! lotto
+//
+//		// ï¿½è¿­ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//		int[] lotto = new int[45];
+//		int[] lotto2 = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+//				26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 };
+//
+//		// ï¿½Î¶ï¿½ 1~45ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ö¾ï¿½ï¿½Ö±ï¿½, ï¿½ßµï¿½î°«ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½
+//		for (int i = 0; i < lotto.length; i++) {
+//			lotto[i] = i + 1;
+////			System.out.println(lotto[i]);
+//		}
+//		// ï¿½ßºï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½
+////		for (int i = 44; i > 0; i--) {
+////			System.out.println(lotto2[i]);
+////			System.out.println(lotto2[i-1]);
+////			System.out.println("=======");
+////			if (lotto2[i] == lotto2[i-1]) 
+////				System.out.println(lotto2[i]+"\s"+"ï¿½ßºï¿½ï¿½ï¿½ ï¿½ß°ï¿½!");
+////			 else {
+////							System.out.println("ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+////		}		
+//
+////		for (int i = 0; i < lotto2.length-1; i++) {
+////			System.out.println(lotto[i]);
+////			for (int j = 1+ i; j < lotto2.length; j++) {
+////				if(lotto2[i] == lotto2[j]) {
 ////					System.out.println(lotto[i]);
-//				}
-//			}
-//		}
-		for (int i = 0; i < 1000; i++) {
-			int r = (int) (Math.random() * 44) + 1;
-			int tmp = lotto[0];
-			lotto[0] = lotto[r];
-			lotto[r] = tmp;
-		}
-		for (int i = 0; i < 7; i++) {
-//			System.out.println(lotto[i]);
-		}
-		for (int i = 0; i < 6; i++) {
-			for (int j = i + 1; j < 7; j++) {
-				if (lotto[i] > lotto[j]) {
-					int tmp = lotto[i];
-					lotto[i] = lotto[j];
-					lotto[j] = tmp;
-				}
-			}
-//			System.out.println(lotto[i]);
-		}
-		// selection sorting
-//		for (int i = lotto.length-1; i > 0; i--) {
-//			int max = i;
-//			for (int j = i - 1; j >= 0; j--) {
-//				if 
-//			}
-//			
-	}
-
-	static void lotto() {
-		// ±Ý¿äÀÏ, ¿ù¿äÀÏ º¹½À!!! lotto
-
-		// ¹è¿­ Å©±â »ý¼º
-		int[] lotto = new int[45];
-		int[] lotto2 = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-				26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 };
-
-		// ·Î¶Ç 1~45±îÁö ¹Ýº¹¹® »ç¿ëÇØ¼­ ³Ö¾îÁÖ±â, Àßµé¾î°«´ÂÁö È®ÀÎÇÏ±â
-		for (int i = 0; i < lotto.length; i++) {
-			lotto[i] = i + 1;
-//			System.out.println(lotto[i]);
-		}
-		// Áßº¹°ª È®ÀÎÇÏ±â
-//		for (int i = 44; i > 0; i--) {
-//			System.out.println(lotto2[i]);
-//			System.out.println(lotto2[i-1]);
-//			System.out.println("=======");
-//			if (lotto2[i] == lotto2[i-1]) 
-//				System.out.println(lotto2[i]+"\s"+"Áßº¹°ª ¹ß°ß!");
-//			 else {
-//							System.out.println("Áßº¹°ªÀÌ ¾ø½À´Ï´Ù.");
-//		}		
-
-//		for (int i = 0; i < lotto2.length-1; i++) {
-//			System.out.println(lotto[i]);
-//			for (int j = 1+ i; j < lotto2.length; j++) {
-//				if(lotto2[i] == lotto2[j]) {
-//					System.out.println(lotto[i]);
-//				}
-//				
-//			}
-//			
-//		}
-
-	}
-
-	static void string_test() {
-		String text = "À§Å°¹é°ú´Â Á¾ÀÌ ±â¹Ý Âü°í ÀÚ·á¿Í´Â ¾ÆÁÖ ´Ù¸£°Ô ½Ç½Ã°£À¸·Î ÇÔ²² ÆíÁýÇÕ´Ï´Ù. "
-				+ "À§Å°¹é°ú´Â ²÷ÀÓ¾øÀÌ »õ·Î ¸¸µé¾îÁö°í °»½ÅµÇ¹Ç·Î ¿ª»çÀû »ç°Ç¿¡ °üÇÑ Ç×¸ñÀº ¼öºÐ ³»¿¡ »ý¼ºµË´Ï´Ù. "
-				+ "¹Ý¸é¿¡ Á¾ÀÌ ±â¹Ý ¹é°ú»çÀü¿¡¼­´Â ÀÌ¿Í °°Àº °úÁ¤ÀÌ ¼ö°³¿ùÀÌ³ª ¼ö³âÀÌ °É¸³´Ï´Ù. " + "¿À·¡ Àü¿¡ »ý¼ºµÈ Ç×¸ñÀº ½Ã°£ÀÌ °¡¸é¼­ Á¡Á¡ ´õ ÀÏ¹ÝÈ­µÇ°í Áß¸³Àû ½Ã°¢À¸·Î º¯ÇÕ´Ï´Ù. "
-				+ "»õ·Î ¸¸µé¾îÁø Ç×¸ñÀº Àß¸øµÈ Á¤º¸, ¹é°ú»çÀü¿¡ ½Æ±â¿¡ ºÎÀûÀýÇÑ ³»¿ë ¶Ç´Â ¹®¼­¸¦ ÈÑ¼ÕÇÏ´Â ³»¿ëÀ» Æ÷ÇÔÇÒ ¼ö ÀÖ½À´Ï´Ù."
-				+ " ÀÌ Á¡À» ÁÖÀÇÇÏ¸é À¯¿ëÇÑ Á¤º¸¸¦ ÃëÇÏ°í Àß¸øµÈ Á¤º¸¸¦ ÇÇÇÏ´Â µ¥ µµ¿òÀÌ µË´Ï´Ù.";
-		// ºñ±³ ¹®ÀÚ´Â '´Â, À¸' ¹®ÀÚ°¡ ¸î¹ø ÀÖ´ÂÁö È®ÀÎÇÏ¼¼¿ä
+////				}
+////				
+////			}
+////			
+////		}
+//
+//	}
+//
+//	static void string_test() {
+//		String text = "ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Í´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½Ç½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. "
+//				+ "ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÅµÇ¹Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ë´Ï´ï¿½. "
+//				+ "ï¿½Ý¸é¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É¸ï¿½ï¿½Ï´ï¿½. " + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï¹ï¿½È­ï¿½Ç°ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½. "
+//				+ "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ±â¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¼ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½."
+//				+ " ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½.";
+//		 ï¿½ï¿½ ï¿½ï¿½ï¿½Ú´ï¿½ 'ï¿½ï¿½, ï¿½ï¿½' ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½
 //	System.out.println(text.charAt(0));
 //	char[] char_1 = new char[text.length()];
-		int s = 0;
-		for (int i = 0; i < text.length(); i++) {
-			if (text.charAt(i) == '´Â' | text.charAt(i) == 'À¸') {
-				s++;
-			}
-		}
-//	System.out.println("´Â°úÀ¸´Â\s"+s+"¹ø ³ª¿Ô½À´Ï´Ù.");
-
-		String t = text.trim();
-		t = t.replace(" ", "");
-//		System.out.println(t);
-//		System.out.println(t.length());
-
-		char[] ca = new char[t.length()];
-		String ns = "";
-
+//		int s = 0;
 //		for (int i = 0; i < text.length(); i++) {
-//			if (text.charAt(i) == '´Â' | text.charAt(i) == 'À¸') {
-//				for (int j = 0; j < ca.length; j++) {
-//					ca[j] = text.charAt(i);
-//				}
+//			if (text.charAt(i) == 'ï¿½ï¿½' | text.charAt(i) == 'ï¿½ï¿½') {
+//				s++;
 //			}
 //		}
-//		System.out.println(ca.length);
-		for (int i = 0; i < ca.length; i++) {
-			ca[i] = t.charAt(i);
-//			ns += ca[i];
-		}
+//	System.out.println("ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½\s"+s+"ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ï´ï¿½.");
+//
+////		String t = text.trim();
+////		t = t.replace(" ", "");
+//////		System.out.println(t);
+//////		System.out.println(t.length());
+////
+////		char[] ca = new char[t.length()];
+////		String ns = "";
+//
+////		for (int i = 0; i < text.length(); i++) {
+////			if (text.charAt(i) == 'ï¿½ï¿½' | text.charAt(i) == 'ï¿½ï¿½') {
+////				for (int j = 0; j < ca.length; j++) {
+////					ca[j] = text.charAt(i);
+////				}
+////			}
+////		}
+////		System.out.println(ca.length);
 //		for (int i = 0; i < ca.length; i++) {
-//			System.out.println(ca[i]);
+//			ca[i] = t.charAt(i);
+////			ns += ca[i];
 //		}
-		char[] ca2 = t.toCharArray();
-		for (int i = 0; i < ca2.length - 1; i++) {
-			for (int j = 1 + i; j < ca2.length; j++) {
-				if (ca2[i] == ca2[j]) {
-					ca2[j] = ' ';
-//					System.out.println(ca2[i]);
-				}
-			}
-
-		}
-		for (int i = 0; i < ca2.length; i++) {
-			ns += ca2[i];
-		}
-		t = ns.replace(" ", "");
-		char[] c3 = t.toCharArray();
-		for (int i = 0; i < c3.length; i++) {
-			System.out.println(c3[i]);
-		}
-//		String tt = "hello";
-//		
-//		char c2 = tt.charAt(0);
-//		System.out.println(c2);
-	}
-}
+////		for (int i = 0; i < ca.length; i++) {
+////			System.out.println(ca[i]);
+////		}
+//		char[] ca2 = t.toCharArray();
+//		for (int i = 0; i < ca2.length - 1; i++) {
+//			for (int j = 1 + i; j < ca2.length; j++) {
+//				if (ca2[i] == ca2[j]) {
+//					ca2[j] = ' ';
+////					System.out.println(ca2[i]);
+//				}
+//			}
+//
+//		}
+//		for (int i = 0; i < ca2.length; i++) {
+//			ns += ca2[i];
+//		}
+//		t = ns.replace(" ", "");
+//		char[] c3 = t.toCharArray();
+//		for (int i = 0; i < c3.length; i++) {
+//			System.out.println(c3[i]);
+//		}
+////		String tt = "hello";
+////		
+////		char c2 = tt.charAt(0);
+////		System.out.println(c2);
+//	}
+//}

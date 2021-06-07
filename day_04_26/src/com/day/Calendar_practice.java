@@ -1,106 +1,106 @@
-package com.day;
-
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
-public class Calendar_practice {
-	public static void main(String[] arg) {
-		String text = "hello world";
-		String path = "D:/JAVA_JWH/Work/day_04_26/Text/t.txt";
-		File file = new File(path);
-		
-		try (FileOutputStream output = new FileOutputStream(file)){
-			byte[] b = text.getBytes();
-			output.write(b);
-		}
-				
-		catch (Exception e) {
-			// TODO: handle exception
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-		}System.out.println("µµ´Þ");
-		
-		try (FileInputStream input = new FileInputStream(file)){
-			int n = 0;
-			System.out.println(input.available());
-			while ((n = input.available()) > 0) {
-				byte[] b2 = input.readAllBytes();
-				for (int i = 0; i < b2.length; i++) {
-					System.out.print((char)b2[i]);
-				}
-			}
-		}
-		catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
-static void Date_p() {
-	Date today = new Date();
-	
-	SimpleDateFormat sdf0, sdf1, sdf2, sdf3, sdf4;
-	SimpleDateFormat sdf5, sdf6, sdf7, sdf8, sdf9;
-	
-	sdf0 = new SimpleDateFormat("yyyyMMdd");
-	sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-	sdf2 = new SimpleDateFormat("yy³â MM¿ù ddÀÏ E¿äÀÏ");
-	sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-	sdf4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
-	
-	sdf5 = new SimpleDateFormat("¿À´ÃÀº ¿ÃÇØÀÇ D¹øÀç ³¯ÀÔ´Ï´Ù."); //³âÀÇ ¸î¹øÂ° ÀÏ (1~ 366)
-	sdf6 = new SimpleDateFormat("¿À´ÃÀº ¿ÃÇØÀÇ d¹øÀç ³¯ÀÔ´Ï´Ù."); //¿ùÀÇ ¸î¹øÂ° ÀÏ (1~31)
-	sdf7 = new SimpleDateFormat("¿À´ÃÀº ¿ÃÇØÀÇ w¹øÀç ³¯ÀÔ´Ï´Ù."); //³âÀÇ ¸î¹øÂ° ÁÖ (1~53)
-	sdf8 = new SimpleDateFormat("¿À´ÃÀº ¿ÃÇØÀÇ W¹øÀç ³¯ÀÔ´Ï´Ù."); //¿ùÀÇ ¸î»·Â° ÁÖ (1~5)
-	sdf9 = new SimpleDateFormat("¿À´ÃÀº ¿ÃÇØÀÇ F¹øÀç E¿äÀÏÀÔ´Ï´Ù."); //¿ùÀÇ ¸î¹øÂ° ¿äÀÏ, ¿äÀÏ
-
-	System.out.println(sdf0.format(today));
-	System.out.println(sdf1.format(today));
-	System.out.println(sdf2.format(today));
-	System.out.println(sdf3.format(today));
-	System.out.println(sdf4.format(today));
-	System.out.println(sdf5.format(today));
-	System.out.println(sdf6.format(today));
-	System.out.println(sdf7.format(today));
-	System.out.println(sdf8.format(today));
-	System.out.println(sdf9.format(today));
-}
-static void Calend() {
-	Calendar today  = Calendar.getInstance();
-	int year = today.get(Calendar.YEAR);
-	int month = today.get(Calendar.MONTH);
-	int date = today.get(Calendar.DATE);
-	
-	int woy = today.get(Calendar.WEEK_OF_YEAR);
-	int wom = today.get(Calendar.WEEK_OF_MONTH);
-	
-	int doy = today.get(Calendar.DAY_OF_YEAR);
-	int dom = today.get(Calendar.DAY_OF_MONTH);
-	int dow = today.get(Calendar.DAY_OF_WEEK);
-	
-	int hour12 = today.get(Calendar.HOUR);
-	int hour24 = today.get(Calendar.HOUR_OF_DAY);
-	int minute = today.get(Calendar.MINUTE);
-	int second = today.get(Calendar.SECOND);
-	
-	int milliSecond = today.get(Calendar.MILLISECOND);
-	int timeZone = today.get(Calendar.ZONE_OFFSET);
-	int lastDate = today.getActualMaximum(Calendar.DATE);
-	int firstDate = today.getActualMinimum(Calendar.DATE);
-	
-	System.out.printf("¿À´ÃÀº %d³â %d¿ù %dÀÏ\n", year, month+1, date);
-	System.out.println("¿À´ÃÀº ¿ÃÇØÀÇ"+woy+"Â°ÁÖ, ÀÌ¹ø´ÞÀÇ"+wom+"Â°ÁÖ."+date+"ÀÏ");
-	System.out.println("¿À´ÃÀº ÀÌ¹ø¿¬µµÀÇ"+doy+"ÀÏÀÌÀÚ, ÀÌ¹ø ´ÞÀÇ"+dom+"ÀÏ. ¿äÀÏÀº"+dow+"ÀÏ(1:ÀÏ¿äÀÏ)");
-	System.out.println("ÇöÀç ½Ã°¢Àº " + hour12 +":"+ minute + ":"+ second +", 24½Ã°£À¸·Î Ç¥ÇöÇÏ¸é " + hour24+":"+ minute + ":"+ second);
-	System.out.println("¿À´ÃÀº " + year +"³â " + month+1 + "¿ù" + date +"ÀÏ");
-	System.out.println("1000ºÐÀÇ 1ÃÊ (0~999): " + milliSecond);
-	System.out.println("timeZone (-12~+12): " + timeZone/(60*60*1000));
-	System.out.println("ÀÌ ´ÞÀÇ ¸¶Áö¸· ³¯: " + lastDate);
-	System.out.println("ÀÌ ´ÞÀÇ Âþ ³¯: " + firstDate);
-}
-}
+//package com.day;
+//
+//
+//import java.io.BufferedWriter;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import java.io.FileWriter;
+//import java.text.SimpleDateFormat;
+//import java.util.Calendar;
+//import java.util.Date;
+//
+//public class Calendar_practice {
+//	public static void main(String[] arg) {
+//		String text = "hello world";
+//		String path = "D:/JAVA_JWH/Work/day_04_26/Text/t.txt";
+//		File file = new File(path);
+//		
+//		try (FileOutputStream output = new FileOutputStream(file)){
+//			byte[] b = text.getBytes();
+//			output.write(b);
+//		}
+//				
+//		catch (Exception e) {
+//			// TODO: handle exception
+//			System.out.println(e.getMessage());
+//			e.printStackTrace();
+//		}System.out.println("ï¿½ï¿½ï¿½ï¿½");
+//		
+//		try (FileInputStream input = new FileInputStream(file)){
+//			int n = 0;
+//			System.out.println(input.available());
+//			while ((n = input.available()) > 0) {
+//				byte[] b2 = input.readAllBytes();
+//				for (int i = 0; i < b2.length; i++) {
+//					System.out.print((char)b2[i]);
+//				}
+//			}
+//		}
+//		catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
+//static void Date_p() {
+//	Date today = new Date();
+//	
+//	SimpleDateFormat sdf0, sdf1, sdf2, sdf3, sdf4;
+//	SimpleDateFormat sdf5, sdf6, sdf7, sdf8, sdf9;
+//	
+//	sdf0 = new SimpleDateFormat("yyyyMMdd");
+//	sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+//	sdf2 = new SimpleDateFormat("yyï¿½ï¿½ MMï¿½ï¿½ ddï¿½ï¿½ Eï¿½ï¿½ï¿½ï¿½");
+//	sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//	sdf4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+//	
+//	sdf5 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½."); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â° ï¿½ï¿½ (1~ 366)
+//	sdf6 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ dï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½."); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â° ï¿½ï¿½ (1~31)
+//	sdf7 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ wï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½."); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â° ï¿½ï¿½ (1~53)
+//	sdf8 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Wï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½."); //ï¿½ï¿½ï¿½ï¿½ ï¿½î»·Â° ï¿½ï¿½ (1~5)
+//	sdf9 = new SimpleDateFormat("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Fï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½."); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½
+//
+//	System.out.println(sdf0.format(today));
+//	System.out.println(sdf1.format(today));
+//	System.out.println(sdf2.format(today));
+//	System.out.println(sdf3.format(today));
+//	System.out.println(sdf4.format(today));
+//	System.out.println(sdf5.format(today));
+//	System.out.println(sdf6.format(today));
+//	System.out.println(sdf7.format(today));
+//	System.out.println(sdf8.format(today));
+//	System.out.println(sdf9.format(today));
+//}
+//static void Calend() {
+//	Calendar today  = Calendar.getInstance();
+//	int year = today.get(Calendar.YEAR);
+//	int month = today.get(Calendar.MONTH);
+//	int date = today.get(Calendar.DATE);
+//	
+//	int woy = today.get(Calendar.WEEK_OF_YEAR);
+//	int wom = today.get(Calendar.WEEK_OF_MONTH);
+//	
+//	int doy = today.get(Calendar.DAY_OF_YEAR);
+//	int dom = today.get(Calendar.DAY_OF_MONTH);
+//	int dow = today.get(Calendar.DAY_OF_WEEK);
+//	
+//	int hour12 = today.get(Calendar.HOUR);
+//	int hour24 = today.get(Calendar.HOUR_OF_DAY);
+//	int minute = today.get(Calendar.MINUTE);
+//	int second = today.get(Calendar.SECOND);
+//	
+//	int milliSecond = today.get(Calendar.MILLISECOND);
+//	int timeZone = today.get(Calendar.ZONE_OFFSET);
+//	int lastDate = today.getActualMaximum(Calendar.DATE);
+//	int firstDate = today.getActualMinimum(Calendar.DATE);
+//	
+//	System.out.printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½\n", year, month+1, date);
+//	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+woy+"Â°ï¿½ï¿½, ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½"+wom+"Â°ï¿½ï¿½."+date+"ï¿½ï¿½");
+//	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+doy+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½"+dom+"ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+dow+"ï¿½ï¿½(1:ï¿½Ï¿ï¿½ï¿½ï¿½)");
+//	System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ " + hour12 +":"+ minute + ":"+ second +", 24ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï¸ï¿½ " + hour24+":"+ minute + ":"+ second);
+//	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + year +"ï¿½ï¿½ " + month+1 + "ï¿½ï¿½" + date +"ï¿½ï¿½");
+//	System.out.println("1000ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ (0~999): " + milliSecond);
+//	System.out.println("timeZone (-12~+12): " + timeZone/(60*60*1000));
+//	System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: " + lastDate);
+//	System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½: " + firstDate);
+//}
+//}
