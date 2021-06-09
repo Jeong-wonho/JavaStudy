@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>첫번째 HTML입니다.</title>
-    </head>
-    <body>
-        <h1>WELCOME!</h1>
-        <h3>정원호's First HTML</h3>
-    </body>
+
+<head>
+    <title>첫번째 HTML입니다.</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>WELCOME!</h1>
+    <h3>정원호's First HTML</h3>
+    <h6>작은 제목</h6>
+    <!--p:단락-->
+    <p>이미 6살 쌍둥이 자녀를 두고 있던 시톨레는 당초 초음파 검사로 여덟 쌍둥이를 임신 중인 것으로 알고 있었지만, 출산 과정에서 두 명이 더 있는 것으로 확인됐다.</p>
+    <p>임신 촉진 치료를 받지 않았다는 시톨레는 "그동안 계속 힘들었지만 열쌍둥이를 모두 건강하게 낳을 수 있게 해달라고 기도했다"며 "아이들이 자궁에 잘 있을지, 살아남을 수는 있을지 걱정했다"고 말했다.
+    </p>
+    <img src="./images/cat.jpg" alt="고양이" />
+    <img src="./images/cat.jpg" width="300" height="300" alt="고양이" />
+    <img src="./images/cat.jpg" width="300" alt="고양이(상대경로)" />
+    <img src="C:/Users/KOSTA/Desktop/java/JavaStudy/myfront/images/cat.jpg" width="300" alt="고양이(절대경로)" />
+
+    <!--table: 표 만들기-->
+    <table border ="1", width = "300" height = "300">
+        <thead>
+            <!--tr(raw) : 행-->
+            <!--th : 컬럼-->
+            <tr>
+                <th>이름</th> <!-- table head-->
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>정원호</td><!-- table data-->
+                <td>송파</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>분당</td>
+            </tr>
+            <tr>
+                <td>김근완</td>
+                <td>성남</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
+    <table border ="1", width = "300" height = "300">
+            <!--tr(raw) : 행-->
+            <!--th : 컬럼-->
+            <!--tb 없으면 자동으로 끼어넣는다.!-->
+            <tr>
+                <th>이름</th> <!-- table head-->
+                <th>주소</th>
+            </tr>
+
+            <tr>
+                <td>정원호</td><!-- table data-->
+                <td>송파</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>분당</td>
+            </tr>
+            <tr>
+                <td>김근완</td>
+                <td>성남</td>
+            </tr>
+            <tr>
+                <td rowspan = "2">코스타</td>
+                <td>가산</td>
+            </tr>
+            <tr>
+            
+                <td>분당</td>
+            </tr>
+
+            <tr>
+                <td colspan = "2">총 인원수 : 4</td> <!-- colspan : 두개의 컬럼을 하나로 합치겠다.-->
+            </tr>
+    </table>
+        <!--목록-->
+        <ul>
+            <li>ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+        </ul>
+        
+        <ul>
+            <li>ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+        </ul>
+        
+        <ul>
+            <li>ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+        </ul>
+</body>
+
 </html>
