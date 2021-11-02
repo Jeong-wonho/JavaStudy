@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="chap05.Week"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="chap06.Earth"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="chap06.PrintAnnotation"/>
+<fullyQualifiedTypeName name="chap07.DmbCellPhone"/>
+<fullyQualifiedTypeName name="chap07.Calculator"/>
+<fullyQualifiedTypeName name="java.rmi.Remote"/>
+<fullyQualifiedTypeName name="chap08.RemoteControl"/>
+<fullyQualifiedTypeName name="chap08.InterfaceA"/>
+<fullyQualifiedTypeName name="chap09.A.B"/>
+<fullyQualifiedTypeName name="chap09.A.C"/>
+<fullyQualifiedTypeName name="chap09.Outter.Nested"/>
+<fullyQualifiedTypeName name="chap09.Button.OnClickListener"/>
+<fullyQualifiedTypeName name="chap09.CallListener"/>
+<fullyQualifiedTypeName name="chap09.MessageListener"/>
+<fullyQualifiedTypeName name="chap09.RemoteControl"/>
+<fullyQualifiedTypeName name="chap09.AnonymousRemote"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="chap10.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.StrictMath"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="chap10.BalanceInsufficientException"/>
+</qualifiedTypeNameHistroy>

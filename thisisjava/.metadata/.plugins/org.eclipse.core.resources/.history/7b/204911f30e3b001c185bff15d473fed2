@@ -1,0 +1,9 @@
+package chap10;
+
+public class AccountExample {
+	public static void main(String[] args) {
+		Account account = new Account();
+		//¿¹±Ý
+		account.deposit(10000);
+	}
+}
