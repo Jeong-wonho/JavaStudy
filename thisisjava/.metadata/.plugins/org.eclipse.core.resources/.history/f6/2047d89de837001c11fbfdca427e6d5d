@@ -1,8 +1,0 @@
-package chap09;
-
-public class AnnonymousCalExample {
-	public static void main(String[] args) {
-		AnoymousCal anony = new Anonymous();
-		
-	}
-}

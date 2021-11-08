@@ -1,0 +1,8 @@
+package chap11;
+
+public class Car {
+	
+	public Car() {
+		System.out.println("이것은 차다");
+	}
+}

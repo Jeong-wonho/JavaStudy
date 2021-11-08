@@ -1,0 +1,18 @@
+package chap11;
+
+public class Car {
+	public String model;
+	public String speed;
+	
+	public Car(String model) {
+		this.model = model;
+	}
+
+	public Car(String model, String speed) {
+		this.model = model;
+		this.speed =speed;
+	}
+	public Car() {
+		// TODO Auto-generated constructor stub
+	}
+}

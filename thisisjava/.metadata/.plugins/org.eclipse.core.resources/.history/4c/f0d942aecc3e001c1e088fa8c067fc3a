@@ -1,0 +1,13 @@
+package chap11;
+
+import java.util.Objects;
+
+public class EqualsAndDeepEqualsExample {
+	public static void main(String[] args) {
+		Integer o1 = 1000;
+		Integer o2 = 1000;
+		System.out.println(Objects.deepEquals(o1, o2));
+		System.out.println(Objects.deepEquals(o1, null));
+		System.out.println(Objects.deepEquals(null, o2));
+	}
+}

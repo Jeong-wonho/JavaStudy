@@ -1,0 +1,29 @@
+package chap11;
+
+public class Member implements Cloneable{
+	public String id;
+	public String name;
+	public String password;
+	public int age;
+	public boolean adult;
+	
+	public Member(String id) {
+		this.id = id;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Member) {
+		Member member = (Member) obj;
+		if(id.contentEquals(member.id)) {
+			return true;
+		}
+	}
+	return false;
+}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id.hashCode();
+	}
+}
