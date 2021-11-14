@@ -1,8 +1,0 @@
-package chap11;
-
-public class ReflectionExample {
-	public static void main(String[] args) {
-		Class clazz = Class.forName("sec06.exam02_reflection.Car");
-		
-	}
-}
