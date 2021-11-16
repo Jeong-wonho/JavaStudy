@@ -21,6 +21,7 @@ public class KeyPad {
 				int mR = Math.abs(i - rightNumber);
 				int dL = (mL / 3) + (mL % 3);
 				int dR = (mR / 3) + (mR % 3);
+				
 				if (dL > dR) {
 					answer += "R";
 					rightNumber = i;
