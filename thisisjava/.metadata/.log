@@ -3672,3 +3672,30 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 17:40:42.620
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.egit.core 4 0 2021-11-27 17:55:48.405
+!MESSAGE An exception occurred during push on URI https://github.com/Jeong-wonho/JavaStudy.git: https://github.com/Jeong-wonho/JavaStudy.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/Jeong-wonho/JavaStudy.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:436)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2021-11-27 17:57:46.582
+!MESSAGE An exception occurred during push on URI https://github.com/Jeong-wonho/JavaStudy.git: https://github.com/Jeong-wonho/JavaStudy.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/Jeong-wonho/JavaStudy.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:436)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1335)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 18:08:14.375
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
