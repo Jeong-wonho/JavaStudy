@@ -3699,3 +3699,15 @@ org.eclipse.jgit.errors.TransportException: https://github.com/Jeong-wonho/JavaS
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 18:08:14.375
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.equinox.security 1 0 2021-11-27 18:09:48.155
+!MESSAGE New keyring password generated. 
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 18:10:52.694
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 18:17:33.013
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-27 18:29:21.403
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
