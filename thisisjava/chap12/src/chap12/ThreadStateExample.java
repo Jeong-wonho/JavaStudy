@@ -6,5 +6,4 @@ public class ThreadStateExample {
 				new StatePrintThread(new TargetThread());
 		statePrintThread.start();
 	}
-
 }
