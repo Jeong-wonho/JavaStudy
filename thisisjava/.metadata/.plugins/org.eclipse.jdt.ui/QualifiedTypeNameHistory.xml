@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="chap09.A.C"/>
-<fullyQualifiedTypeName name="chap09.Outter.Nested"/>
-<fullyQualifiedTypeName name="chap09.Button.OnClickListener"/>
-<fullyQualifiedTypeName name="chap09.CallListener"/>
-<fullyQualifiedTypeName name="chap09.MessageListener"/>
-<fullyQualifiedTypeName name="chap09.RemoteControl"/>
-<fullyQualifiedTypeName name="chap09.AnonymousRemote"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
-<fullyQualifiedTypeName name="chap10.ArrayIndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="java.lang.StrictMath"/>
-<fullyQualifiedTypeName name="chap10.BalanceInsufficientException"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
 <fullyQualifiedTypeName name="chap11.StudentComparator"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
@@ -55,9 +41,23 @@
 <fullyQualifiedTypeName name="java.lang.Thread.State"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="chap12.ThreadYieldA"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="chap12.AutoSaveThread"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="chap12.WorkThread"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadPoolExecutor"/>
+<fullyQualifiedTypeName name="chap12.ExecuteExample"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+<fullyQualifiedTypeName name="java.lang.Runtime"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Result"/>
+<fullyQualifiedTypeName name="javax.naming.spi.DirStateFactory.Result"/>
+<fullyQualifiedTypeName name="chap12.CompletionServiceExample"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutorCompletionService"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="java.nio.channels.CompletionHandler"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="chap12.CallbackExample"/>
 </qualifiedTypeNameHistroy>
