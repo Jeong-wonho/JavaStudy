@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
-<fullyQualifiedTypeName name="chap11.StudentComparator"/>
-<fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="chap11.CompareExample.Student"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
@@ -16,8 +10,6 @@
 <fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
 <fullyQualifiedTypeName name="chap11.StringTokenizerExample"/>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.util.TimeZone"/>
@@ -57,7 +49,15 @@
 <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
 <fullyQualifiedTypeName name="java.nio.channels.CompletionHandler"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="chap12.CallbackExample"/>
+<fullyQualifiedTypeName name="java.lang.UnknownError"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="chap13.Pair"/>
+<fullyQualifiedTypeName name="chap13.Util"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="chap13.TV"/>
+<fullyQualifiedTypeName name="chap13.Product"/>
+<fullyQualifiedTypeName name="chap13.Product.Tv"/>
 </qualifiedTypeNameHistroy>
