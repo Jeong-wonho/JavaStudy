@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="chap13.TV"/>
 <fullyQualifiedTypeName name="chap13.Product"/>
 <fullyQualifiedTypeName name="chap13.Product.Tv"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
 </qualifiedTypeNameHistroy>
