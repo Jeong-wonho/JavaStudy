@@ -18,7 +18,5 @@ public class Student2 {
 	public int getScore() {
 		return score;
 	}
-	
-	
-	
+
 }
