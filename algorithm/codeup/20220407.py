@@ -46,13 +46,13 @@ else:
 #6069
 word = input();
 if(word == "A"):
-    print("A: best!!!")
+    print("best!!!")
 elif(word == "B"):
-    print("B: good!!")
+    print("good!!")
 elif(word == "C"):
-    print("C : run!")
+    print("run!")
 elif(word =="D"):
-    print("D : slowly~")
+    print("slowly~")
 else:
     print("what?")
 
