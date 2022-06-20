@@ -1,7 +1,5 @@
 package level1;
 
-import java.util.HashMap;
-
 public class NumberStringAndWord {
 	    public int solution(String s) {
 	    	int answer = 0;
