@@ -1,28 +1,64 @@
 <template>
-  <div class="menu">
-    <a v-for="(a, i) in 메뉴들" :key="i">{{ a }}</a>
+  <div class="black-bg" v-if="isModal">
+    <div class="white-bg">
+      <h1>상세페이지임</h1>
+      <p>상세페이지 내용임</p>
+      <button @click="isModal = false">닫기</button>
+    </div>
   </div>
-  <div v-for="(prod, index) in products" :key="index">
-    <h4 class="red" :style="style1">{{ prod }}</h4>
-    <p>{{ price[index] }} 만원</p>
+
+  <div class="menu">
+    <a v-for="(menu, i) in menus" :key="i">{{ menu }}</a>
+  </div>
+  <div v-for="(dat, i) in data" :key="i">
+    <img :src="dat.image" class="room-img" />
+    <h4 @click="isModal = true">{{ dat.title }}</h4>
+    <p>{{ dat.price }}원</p>
   </div>
 </template>
 
 <script>
+import data from "./assets/oneroom.js";
+
 export default {
   name: "App",
   data() {
     return {
-      메뉴들: ["Home", "Shop", "About"],
-      products: ["역삼동원룸", "천호동원룸", "마포구원룸"],
-      price: [50, 70, 100],
+      menus: ["Home", "Shop", "About"],
+      data: data,
+      isModal: false,
     };
+  },
+  methods: {
+    increase(i) {
+      this.신고수[i] += 1;
+    },
   },
   components: {},
 };
 </script>
 
 <style>
+body {
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  padding: 20px;
+}
+.white-bg {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,5 +76,9 @@ export default {
 .menu a {
   color: white;
   padding: 10px;
+}
+.room-img {
+  width: 100%;
+  margin-top: 40px;
 }
 </style>
