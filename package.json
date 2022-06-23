@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ews-javascript-api": "^0.11.0"
+  }
+}
