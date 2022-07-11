@@ -17,18 +17,18 @@ const Mychart = ({ coinData }) => {
     datasets: [
       {
         type: "line",
-        label: "Dataset 1",
-        borderColor: "rgb(54, 162, 235)",
-        borderWidth: 2,
+        label: "Line 그래프",
+        borderColor: "#32393e",
+        borderWidth: 3,
         data: chartDatas.reverse(),
-        yAxisID: "y_sub",
+        yAxisID: "가격",
       },
       {
         type: "bar",
-        label: "Dataset 3",
+        label: "BarGraph",
         backgroundColor: chartColors,
         data: chartDatas.reverse(),
-        yAxisID: "y_sub",
+        yAxisID: "가격",
       },
     ],
   };
