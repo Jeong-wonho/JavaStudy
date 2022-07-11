@@ -3,13 +3,16 @@ import "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 
 const Mychart = ({ coinData }) => {
-  const chartData = [];
-
+  const chartDatas = [];
+  const chartColors = [];
   coinData.forEach((coin) => {
+    let color =
+      coin.change === "RISE" ? "rgb(255, 99, 132)" : "rgb(54, 162, 235)";
+    chartColors.push(color);
     //chartData만들기
-    chartData.push({ x: coin.tradeDate, y: coin.tradePrice });
+    chartDatas.push({ x: coin.tradeDate, y: coin.tradePrice });
   });
-
+  console.log(chartColors);
   const data = {
     datasets: [
       {
@@ -17,14 +20,14 @@ const Mychart = ({ coinData }) => {
         label: "Dataset 1",
         borderColor: "rgb(54, 162, 235)",
         borderWidth: 2,
-        data: chartData.reverse(),
+        data: chartDatas.reverse(),
         yAxisID: "y_sub",
       },
       {
         type: "bar",
         label: "Dataset 3",
-        backgroundColor: "rgb(255, 99, 132)",
-        data: chartData.reverse(),
+        backgroundColor: chartColors,
+        data: chartDatas.reverse(),
         yAxisID: "y_sub",
       },
     ],
