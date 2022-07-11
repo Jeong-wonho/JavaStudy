@@ -3,9 +3,9 @@ import Cointitle from "./components/Cointitle";
 
 function App() {
   return (
-    <div className="container mx-auto px-4 ">
-        <Cointitle/>
-        <Cointable/>
+    <div className="container mx-auto px-4">
+      <Cointitle />
+      <Cointable />
     </div>
   );
 }
