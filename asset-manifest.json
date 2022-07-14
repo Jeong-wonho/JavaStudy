@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my_first_coin/static/css/main.94dbb4db.css",
+    "main.js": "/my_first_coin/static/js/main.39be6e72.js",
+    "static/js/787.0e7d91a1.chunk.js": "/my_first_coin/static/js/787.0e7d91a1.chunk.js",
+    "index.html": "/my_first_coin/index.html",
+    "main.94dbb4db.css.map": "/my_first_coin/static/css/main.94dbb4db.css.map",
+    "main.39be6e72.js.map": "/my_first_coin/static/js/main.39be6e72.js.map",
+    "787.0e7d91a1.chunk.js.map": "/my_first_coin/static/js/787.0e7d91a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94dbb4db.css",
+    "static/js/main.39be6e72.js"
+  ]
+}
