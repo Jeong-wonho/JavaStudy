@@ -1,6 +1,7 @@
 import React from "react";
 import Mychart from "./Mychart";
-export const Modal = ({ visible, onClose, data }) => {
+
+export const Modal = ({ visible, onClose, data, title }) => {
   const handleOnClose = (e) => {
     if (e.target.id === "modalmain") {
       onClose();
@@ -17,7 +18,7 @@ export const Modal = ({ visible, onClose, data }) => {
     >
       <div className="bg-white p-2 rounded w-2/4">
         <h1 className="text-5xl text-blue-900 border-b-2 border-blue-900 pb-2">
-          BitCoin
+          {title.name}
         </h1>
 
         <div className="text-4xl text-blue-900 border-b-2 border-blue-900 pb-4">

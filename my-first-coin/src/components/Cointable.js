@@ -1,11 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Modal } from "./Modal";
+import { useExchangeState } from "../contexts/CoinContext";
 
 export default function Cointable() {
   //   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [coinInfo, setCoinInfo] = useState([]);
+  const [coinInf, setCoinInf] = useState({});
+
+  //test용 코드
+  const state = useExchangeState();
+  const { data: markets } = state.market;
+  const { data: realtimeData } = state.realtimeData;
+
+  const sortedData = useCallback(() => {
+    return (
+      realtimeData &&
+      realtimeData.sort((a, b) => b.acc_trade_price_24h - a.acc_trade_price_24h)
+    );
+  }, [realtimeData]);
+
+  // console.log(markets, realtimeData);
+  console.log(sortedData());
+  //-----------------------------
   //click할 때 데이터를 가져올 함수도 필요하다.!
   const getCoins = async () => {
     const json = await (
@@ -31,7 +49,7 @@ export default function Cointable() {
     setIsModal(true);
   };
 
-  // const saveCoinTitle = (coin) => setCoinInfo(coin);
+  const saveCoinTitle = (coin) => setCoinInf(coin);
   const handleOnClose = () => setIsModal(false);
   return (
     <div className="table m-10">
@@ -56,6 +74,7 @@ export default function Cointable() {
               onClick={() => {
                 showModal();
                 getCoinInfo();
+                saveCoinTitle(coin);
               }}
             >
               <td className="p-5">{coin.rank}</td>
@@ -91,7 +110,12 @@ export default function Cointable() {
         </tbody>
       </table>
 
-      <Modal onClose={handleOnClose} visible={isModal} data={coinInfo} />
+      <Modal
+        onClose={handleOnClose}
+        visible={isModal}
+        data={coinInfo}
+        title={coinInf}
+      />
     </div>
   );
 }

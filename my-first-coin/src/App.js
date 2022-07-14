@@ -1,12 +1,12 @@
-import Cointable from "./components/Cointable";
-import Cointitle from "./components/Cointitle";
-
+import CoinSimulator from "./components/CoinSimulator";
+import { ExchangeProvider, SummaryProvider } from "./contexts/CoinContext";
 function App() {
   return (
-    <div className="container mx-auto px-4">
-      <Cointitle />
-      <Cointable />
-    </div>
+    <ExchangeProvider>
+      <SummaryProvider>
+        <CoinSimulator />
+      </SummaryProvider>
+    </ExchangeProvider>
   );
 }
 
