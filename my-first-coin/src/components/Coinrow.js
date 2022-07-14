@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useCallback} from "react";
+import {useSummaryDispatch} from "../contexts/CoinContext";
 
 export const Coinrow = ({
   coin,
@@ -7,6 +8,14 @@ export const Coinrow = ({
   showModal,
   getCoinInfo,
 }) => {
+  const dispatch = useSummaryDispatch();
+  const selectCoin = useCallback(() => {
+    dispatch({
+      type: "SELECT_COIN",
+      code: coin.code,
+      name
+    })
+  }, [coin.code, dispatch, name])
   return (
     <tr
       className="hover:bg-indigo-900"
@@ -14,6 +23,7 @@ export const Coinrow = ({
       onClick={() => {
         showModal();
         getCoinInfo(coin);
+        selectCoin();
       }}
     >
       <td>{name}</td>
