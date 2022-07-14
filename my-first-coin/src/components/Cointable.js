@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { Modal } from "./Modal";
-import { useExchangeState } from "../contexts/CoinContext";
+import { Coinrow } from "./Coinrow";
+import { useExchangeState, useSummaryState } from "../contexts/CoinContext";
 
 export default function Cointable() {
-  //   const [loading, setLoading] = useState(true);
-  const [coins, setCoins] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [coinInfo, setCoinInfo] = useState([]);
-  const [coinInf, setCoinInf] = useState({});
-
+  const [coinTitle, setCoinTitle] = useState({});
+  const summaryState = useSummaryState();
+  const { code, name } = summaryState;
   //test용 코드
   const state = useExchangeState();
   const { data: markets } = state.market;
@@ -21,100 +21,95 @@ export default function Cointable() {
     );
   }, [realtimeData]);
 
-  // console.log(markets, realtimeData);
-  console.log(sortedData());
   //-----------------------------
   //click할 때 데이터를 가져올 함수도 필요하다.!
-  const getCoins = async () => {
-    const json = await (
-      await fetch(`https://api.coinpaprika.com/v1/tickers?quotes=KRW`)
-    ).json();
-
-    setCoins(json.slice(0, 100));
-    // setLoading(false);
-  };
 
   const getCoinInfo = async (coin) => {
     const response = await fetch(
-      `https://crix-api-cdn.upbit.com/v1/crix/trades/days?code=CRIX.UPBIT.KRW-BTC&count=100`
+      `https://crix-api-cdn.upbit.com/v1/crix/trades/days?code=CRIX.UPBIT.${coin.code}&count=100`
     );
     const json = await response.json();
     setCoinInfo(json);
   };
-  useEffect(() => {
-    getCoins();
+
+  const changeLiteral = useCallback((change) => {
+    // 가격변동 +, - 함수
+    if (change === "RISE") {
+      return "+";
+    } else if (change === "FALL") {
+      return "-";
+    }
+    return "";
   }, []);
 
-  const showModal = () => {
-    setIsModal(true);
-  };
-
-  const saveCoinTitle = (coin) => setCoinInf(coin);
+  const showModal = () => setIsModal(true);
   const handleOnClose = () => setIsModal(false);
   return (
     <div className="table m-10">
       <table className="table-fixed text-white w-full text-center">
         <thead className="text-3xl pb-3 m-10">
           <tr className="border-separate border-bottom border-slate-400">
-            <th className="p-5">순위</th>
             <th>종목</th>
-            <th>기호</th>
             <th>가격(KRW)</th>
-            <th>총 시가</th>
+            <th>고가</th>
+            <th>저가</th>
             <th>거래량(24H)</th>
             <th>변동(24H)</th>
-            <th>변동(7D)</th>
           </tr>
         </thead>
         <tbody className="text-2xl">
-          {coins.map((coin, idx) => (
-            <tr
-              className="hover:bg-indigo-900"
-              key={idx}
-              onClick={() => {
-                showModal();
-                getCoinInfo();
-                saveCoinTitle(coin);
-              }}
-            >
-              <td className="p-5">{coin.rank}</td>
-              <td>{coin.name}</td>
-              <td>{coin.symbol}</td>
-              <td>{Math.round(coin.quotes.KRW.price.toFixed(1))} KRW</td>
-              <td>
-                {(coin.quotes.KRW.market_cap / 1000000000000).toFixed(2)}T
-              </td>
-              <td>
-                {(coin.quotes.KRW.volume_24h / 1000000000000).toFixed(2)}T
-              </td>
-              <td
-                className={
-                  coin.quotes.KRW.percent_change_24h > 0
-                    ? "text-red-500"
-                    : "text-blue-500"
+          {sortedData() &&
+            sortedData().map((coin) => (
+              // <tr
+              //   className="hover:bg-indigo-900"
+              //   key={coin.code}
+              //   onClick={() => {
+              //     showModal();
+              //     getCoinInfo(coin);
+              //   }}
+              // >
+              //   <td>
+              //     {
+              //       markets.filter((list) => list.market === coin.code)[0]
+              //         .korean_name
+              //     }
+              //   </td>
+              //   <td>{Math.round(coin.trade_price.toFixed(1))} KRW</td>
+              //   <td className="text-red-500">{coin.high_price} KRW</td>
+              //   <td className="text-blue-500">{coin.low_price} KRW</td>
+              //   <td>{coin.acc_trade_volume_24h.toFixed(2)}</td>
+              //   <td
+              //     className={
+              //       coin.change === "FALL" ? "text-blue-500" : "text-red-500"
+              //     }
+              //   >
+              //     {changeLiteral(coin.change)}
+              //     {(coin.change_rate * 100).toFixed(2)}%
+              //   </td>
+              // </tr>
+              <Coinrow
+                coin={coin}
+                name={
+                  markets.filter((list) => list.market === coin.code)[0]
+                    .korean_name
                 }
-              >
-                {coin.quotes.KRW.percent_change_24h.toFixed(2)} %
-              </td>
-              <td
-                className={
-                  coin.quotes.KRW.percent_change_7d > 0
-                    ? "text-red-500"
-                    : "text-blue-500"
-                }
-              >
-                {coin.quotes.KRW.percent_change_7d.toFixed(2)}%
-              </td>
-            </tr>
-          ))}
+                key={coin.code}
+                showModal={showModal}
+                getCoinInfo={getCoinInfo}
+                changeLiteral={changeLiteral}
+              />
+            ))}
         </tbody>
       </table>
 
       <Modal
         onClose={handleOnClose}
         visible={isModal}
-        data={coinInfo}
-        title={coinInf}
+        datas={coinInfo}
+        title={coinTitle}
+        change={changeLiteral}
+        code={code}
+        name={name}
       />
     </div>
   );

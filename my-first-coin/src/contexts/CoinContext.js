@@ -37,7 +37,6 @@ const error = (error) => ({
 const saveRealtimeData = (realtimeData, data) => ({
   isLoad: false,
   data: (function () {
-    console.log("realtimeData", realtimeData);
     if (realtimeData.data) {
       if (!realtimeData.data.map((list) => list.code).includes(data.code)) {
         return realtimeData.data.concat(data);
@@ -136,8 +135,9 @@ export async function getMarket(dispatch) {
   try {
     //마켓 가져오기 중
     const response = await axios.get("https://api.upbit.com/v1/market/all");
+
     dispatch({
-      type: "GET_MARKET",
+      type: "GET_MARKET_SUCCESS",
       data: response.data,
     });
 
