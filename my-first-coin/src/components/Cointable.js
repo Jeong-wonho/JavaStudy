@@ -1,14 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { Modal } from "./Modal";
 import { Coinrow } from "./Coinrow";
-import { useExchangeState, useSummaryState } from "../contexts/CoinContext";
+import { useExchangeState } from "../contexts/CoinContext";
 
 export default function Cointable() {
   const [isModal, setIsModal] = useState(false);
   const [coinInfo, setCoinInfo] = useState([]);
   const [coinTitle, setCoinTitle] = useState({});
-  const summaryState = useSummaryState();
-  const { code, name } = summaryState;
+
   //test용 코드
   const state = useExchangeState();
   const { data: markets } = state.market;
@@ -29,7 +28,7 @@ export default function Cointable() {
       `https://crix-api-cdn.upbit.com/v1/crix/trades/days?code=CRIX.UPBIT.${coin.code}&count=100`
     );
     const json = await response.json();
-    setCoinInfo(json);
+    setCoinInfo(json.sort((a ,b) => new Date(a.tradeDate) - new Date(b.tradeDate)));
   };
 
   const changeLiteral = useCallback((change) => {
@@ -60,33 +59,6 @@ export default function Cointable() {
         <tbody className="text-2xl">
           {sortedData() &&
             sortedData().map((coin) => (
-              // <tr
-              //   className="hover:bg-indigo-900"
-              //   key={coin.code}
-              //   onClick={() => {
-              //     showModal();
-              //     getCoinInfo(coin);
-              //   }}
-              // >
-              //   <td>
-              //     {
-              //       markets.filter((list) => list.market === coin.code)[0]
-              //         .korean_name
-              //     }
-              //   </td>
-              //   <td>{Math.round(coin.trade_price.toFixed(1))} KRW</td>
-              //   <td className="text-red-500">{coin.high_price} KRW</td>
-              //   <td className="text-blue-500">{coin.low_price} KRW</td>
-              //   <td>{coin.acc_trade_volume_24h.toFixed(2)}</td>
-              //   <td
-              //     className={
-              //       coin.change === "FALL" ? "text-blue-500" : "text-red-500"
-              //     }
-              //   >
-              //     {changeLiteral(coin.change)}
-              //     {(coin.change_rate * 100).toFixed(2)}%
-              //   </td>
-              // </tr>
               <Coinrow
                 coin={coin}
                 name={
@@ -107,9 +79,7 @@ export default function Cointable() {
         visible={isModal}
         datas={coinInfo}
         title={coinTitle}
-        change={changeLiteral}
-        code={code}
-        name={name}
+        changeLiteral={changeLiteral}
       />
     </div>
   );
