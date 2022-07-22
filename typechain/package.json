@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "",

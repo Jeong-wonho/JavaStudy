@@ -3,6 +3,9 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ES6",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["ES6", "DOM"],
+    "strict": true,
+    "allowJs": true
   }
 }
