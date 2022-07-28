@@ -1,7 +1,11 @@
 {
+  "include": ["src"],
   "compilerOptions": {
-    "target": "es6",
-    "module": "CommonJS",
-    "lib": ["ES6", "DOM"]
+    "outDir": "build",
+    "target": "ES6",
+    "moduleResolution": "node",
+    "lib": ["ES6", "DOM"],
+    "strict": true,
+    "esModuleInterop": true
   }
 }
