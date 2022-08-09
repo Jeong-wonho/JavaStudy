@@ -6,8 +6,8 @@ import { PlusButton } from "./components/PlusButton/index";
 function App() {
   return (
     <CountProvider>
-      <CountLabel />
-      <PlusButton />
+        <CountLabel />
+        <PlusButton />
     </CountProvider>
   );
 }
