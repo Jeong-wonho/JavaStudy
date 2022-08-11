@@ -1,4 +1,5 @@
 import UserList from "./components/UserList";
+import {useRef} from "react";
 
 function App() {
   const users = [
@@ -18,6 +19,11 @@ function App() {
       email: 'liz@example.com'
     }
   ];
+
+  const nextId = useRef(4);
+  const onCreate = () => {
+    nextId.current += 1;
+  }
   return (
     <UserList users={users}/>
   );
