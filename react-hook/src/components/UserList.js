@@ -1,17 +1,25 @@
-function User({user, onRemove}) {
+import {useEffect} from "react";
+
+function User({user, onRemove, onToggle}) {
+    useEffect(()=>{
+        console.log(user);
+    });
+
     return(
         <div>
-            <b>{user.username}</b><span>({user.email})</span>
+            <b style={{cursor:'pointer', color: user.active?'green':'black'}} onClick={()=>onToggle(user.id)}>{user.username}</b>
+            &nbsp;
+            <span>({user.email})</span>
             <button onClick={()=> onRemove(user.id)}>삭제</button>
         </div>
     )
 }
 
-export default function UserList({users, onRemove}) {
+export default function UserList({users, onRemove, onToggle}) {
     return (
         <div>
             {users.map(user => (
-                <User user={user} key={user.id} onRemove={onRemove} />
+                <User user={user} key={user.id} onRemove={onRemove} onToggle={onToggle}/>
             ))}
         </div>
     )
