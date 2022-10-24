@@ -20,4 +20,6 @@ while True:
     m -= 1 # 더할 때마다 1씩 빼기
 
 print(result);
+
+
             
