@@ -6,4 +6,5 @@ graph = [
     [5, INF, 0]
 ]
 
-print(graph)
+print(graph);
+
